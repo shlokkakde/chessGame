@@ -1325,6 +1325,7 @@ let main = {
                     main.methods.togglehighlight(options);
 
                     break;
+                    
 
             }
         },
