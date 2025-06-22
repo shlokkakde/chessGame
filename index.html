@@ -6,10 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chess Game</title>
     <link rel="stylesheet" href="./style.css">
+
+    <style>
+        /* NEON TITLE STYLING */
+        #neon-title-wrapper {
+            width: 100%;
+            overflow: hidden;
+            background-color: black;
+            padding: 10px 0;
+        }
+
+        #neon-title {
+            display: inline-block;
+            white-space: nowrap;
+            font-size: 2.5rem;
+            font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;
+            color: #0ff;
+            text-shadow:
+                0 0 5px #0ff,
+                0 0 10px #0ff,
+                0 0 20px #0ff,
+                0 0 40px #0ff;
+            animation: scroll-left 15s linear infinite;
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* OPTIONAL: Make sure chess board is spaced below the title */
+        #game {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 
 <body>
-    <p1>SHLOK'S GAME BOARD</p1>
+    <!-- NEON SCROLLING TITLE -->
+    <div id="neon-title-wrapper">
+        <div id="neon-title">SHLOK'S GAME BOARD</div>
+    </div>
+
+    <!-- CHESS GAME -->
     <div id="game">
         <div class='cellprefix'>8</div>
         <div class='gamecell' id='1_8'></div>
@@ -109,5 +154,3 @@
 </body>
 
 </html>
-
-
